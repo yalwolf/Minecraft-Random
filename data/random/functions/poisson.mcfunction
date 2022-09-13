@@ -1,6 +1,6 @@
 #> random:poisson
 #
-# Generates a random number using a Poisson distribution
+# 使用Poisson分布生成随机数
 #
 # @public
 # @input
