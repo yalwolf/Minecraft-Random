@@ -1,6 +1,6 @@
 #> random:choose
 #
-# Outputs a random tag from a list
+# 从列表中输出随机标签
 #
 # @public
 # @input
