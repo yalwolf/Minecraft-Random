@@ -15,8 +15,8 @@ scoreboard players set $max random 10
 function random:uniform
 ```
 
-Note: The resulting distribution is not truly uniform for values of `$max`-`$min`+1 that do not divide ![2^31](https://render.githubusercontent.com/render/math?math=2^31).
-While this is insignificant in almost all cases, `random:true_uniform` implements a method that counters modulo-induced bias.
+注意：对于不除 ![2^31](https://render.githubusercontent.com/render/math?math=) 的 `$max`-`$min`+1 的值，结果分布并不真正均匀 2^31)。
+虽然这在几乎所有情况下都无关紧要，但 `random:true_uniform` 实现了一种对抗模数引起的偏差的方法。
 
 ![Generating 10000 numbers in range 0-10](https://cdn.discordapp.com/attachments/925818091475202118/926850852709359616/unknown.png)
 
