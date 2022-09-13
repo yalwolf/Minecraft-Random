@@ -1,6 +1,6 @@
 #> random:number_provider
 #
-# Generates a random number using input from storage
+# 使用来自存储的输入生成随机数
 #
 # @public
 # @input
