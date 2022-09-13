@@ -133,7 +133,7 @@ tellraw @a {"nbt": "Tag", "storage": "random:output"}
 
 ### `random:coin_toss`
 
-Has a 50% chance of evaluating to true.
+有 50% 的机会评估为真。
 
 ```mcfunction
 execute if predicate random:coin_toss run say hi!
