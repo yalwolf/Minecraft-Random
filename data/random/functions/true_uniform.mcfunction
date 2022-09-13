@@ -1,7 +1,7 @@
 #> random:true_uniform
 #
-# Generates a random number between two given bounds using a linear congruential generator
-# Adjusts for modulo bias: if the range is small, or if max-min almost divides 2147483648, the bias should not be noticeable and random:uniform should be used instead for efficiency
+# 使用线性同余生成器在两个给定边界之间生成一个随机数
+# 调整模偏差：如果范围很小，或者如果 max-min 几乎整除 2147483648，则偏差不应该很明显，应该使用 random:uniform 来提高效率
 #
 # @public
 # @input
