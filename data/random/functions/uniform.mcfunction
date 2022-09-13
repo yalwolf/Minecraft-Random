@@ -1,6 +1,6 @@
 #> random:uniform
 #
-# Generates a random number between two given bounds using a linear congruential generator
+# 使用线性同余生成器在两个给定边界之间生成一个随机数
 #
 # @public
 # @within random:exponential
