@@ -1,6 +1,6 @@
 #> random:binomial
 #
-# Generates a random number with binomial distribution of parameters n, p using a value_check predicate on a loop
+# 使用循环上的 value_check 谓词生成具有参数 n、p 的二项式分布的随机数
 #
 # @public
 # @input
