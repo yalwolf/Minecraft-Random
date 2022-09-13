@@ -2,6 +2,10 @@
 
 **Random** 是 Minecraft 1.17+ 的实用程序数据包，它添加了随机数生成和基于随机性的谓词的功能。
 
+由 `[Aeldrion]`(https://github.com/Aeldrion)制作
+
+[原版传送门](https://github.com/Aeldrion/Minecraft-Random)
+
 ## 函数
 
 ### `random:uniform`
