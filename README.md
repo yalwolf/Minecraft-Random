@@ -1,6 +1,6 @@
 # 随机
 
-**Random** is a utility data pack for Minecraft 1.17+ that adds functions for random number generation and randomness-based predicates.
+**Random** 是 Minecraft 1.17+ 的实用程序数据包，它添加了随机数生成和基于随机性的谓词的功能。
 
 ## 函数
 
@@ -183,12 +183,12 @@ scoreboard players set $chance random 123456789
 execute if predicate random:score_ppb run say 12.3456789%
 ```
 
-## Version
+## 版本
 
-This data pack was designed for Minecraft: Java Edition 1.17 and works in 1.18 and 1.19 snapshots.
-The data pack format in `pack.mcmeta` is 10, but you can safely downgrade it to data pack formats used in previous game versions.
+此数据包专为 Minecraft：Java 版 1.17 设计，适用于 1.18 和 1.19 快照。
+`pack.mcmeta` 中的数据包格式为 10，但您可以放心地将其降级为以前游戏版本中使用的数据包格式。
 
-Some functions/predicates work in versions before 1.17:
+一些函数/谓词在 1.17 之前的版本中工作:
 
 | Function                 | Supported versions                                  |
 |--------------------------|-----------------------------------------------------|
@@ -205,4 +205,5 @@ Some functions/predicates work in versions before 1.17:
 | `random:score_percentage` | 1.17+   |
 | `random:score_ppb`        | 1.17+   |
 
-Minecraft Random does not work in Minecraft: Bedrock Edition.
+Minecraft Random 不适用于 Minecraft：基岩版。
+由`Google翻译`提供翻译
