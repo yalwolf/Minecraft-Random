@@ -1,13 +1,13 @@
-# Random
+# 随机
 
 **Random** is a utility data pack for Minecraft 1.17+ that adds functions for random number generation and randomness-based predicates.
 
-## Functions
+## 函数
 
 ### `random:uniform`
 
-Generates a random number between `$min` and `$max` using a linear congruential generator.
-The generated value is saved to score `$out random`.
+使用线性同余生成器在 `$min` 和 `$max` 之间生成一个随机数。
+生成的值被保存到分数 `$out`中。
 
 ```mcfunction
 scoreboard players set $min random 0
