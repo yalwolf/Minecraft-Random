@@ -22,8 +22,8 @@ While this is insignificant in almost all cases, `random:true_uniform` implement
 
 ### `random:binomial`
 
-Generates a random number following a binomial distribution given parameters `$trials` and `$chance`.
-The generated value is saved to score `$out random`.
+在给定参数 `$trials` 和 `$chance` 的情况下按照二项分布生成随机数。
+生成的值被保存到分数`$out random`中。
 
 ```mcfunction
 scoreboard players set $trials random 5
@@ -35,9 +35,9 @@ function random:binomial
 
 ### `random:geometric`
 
-Generates a random number following a geometric distribution given parameter `$chance`, the probability of each Bernoulli trial with a scale of 1,000,000,000.
-The distribution is supported on {1, 2, 3, ...}
-The generated value is saved to score `$out random`.
+根据给定参数`$chance`的几何分布生成一个随机数，每个伯努利试验的概率为 1,000,000,000。
+{1, 2, 3, ...} 支持分发
+生成的值被保存到分数`$out random`中。
 
 ```mcfunction
 scoreboard players set $chance 400000000
@@ -60,9 +60,9 @@ function random:poisson
 
 ### `random:true_uniform`
 
-Generates a random number between `$min` and `$max` using a linear congruential generator and countering modulo-induced bias.
-The generated value is saved to score `$out random`.
-For low values of `$min` and `$max`, the bias is negligible and `random:uniform` should be used instead for efficiency.
+使用线性同余生成器生成一个介于 `$min` 和 `$max` 之间的随机数，并消除模引起的偏差。
+生成的值被保存到分数`$out random`中。
+对于 `$min` 和 `$max` 的低值，偏差可以忽略不计，应该使用 `random:uniform` 来代替以提高效率。
 
 ```mcfunction
 scoreboard players set $min random 1
@@ -72,12 +72,12 @@ function random:true_uniform
 
 ### `random:number_provider`
 
-Generates a random number from storage using a syntax similar to number providers.
-`type` can be `constant`, `uniform`, `binomial`, `geometric`, `exponential` or `poisson`.
-The `minecraft` namespace can optionally be used.
-Like vanilla number providers, `type` can be omitted if `min`/`max` or `n`/`p` are specified.
+使用类似于数字提供程序的语法从存储中生成随机数。
+`type` 可以是`constant`、`uniform`、`binomial`、`geometric`、`exponential` 或 `poisson`。
+可以选择使用 `minecraft` 命名空间。
+与普通数字提供程序一样，如果指定了 `min`/`max` 或 `n`/`p`，则可以省略 `type`。
 
-For type `constant`, the function will return the value of parameter `value`.
+对于 `constant` 类型，函数将返回参数 `value` 的值。
 
 ```mcfunction
 # Constant
@@ -85,8 +85,8 @@ data merge storage random:input {type: "constant", value: 5}
 function random:number_provider
 ```
 
-For type `uniform`, the function will return a random number between parameters `min` and `max` (inclusive).
-`type` is optional as long as `min` and `max` are specified.
+对于 `uniform` 类型，该函数将返回参数 `min` 和 `max` （包括）之间的随机数。
+只要指定了 `min` 和 `max`，`type` 是可选的。
 
 ```mcfunction
 # Uniform
@@ -94,8 +94,8 @@ data merge storage random:input {type: "uniform", min: 1, max: 6}
 function random:number_provider
 ```
 
-For type `binomial`, the function will return a random number following a binomial distribution with `n` trials of probability `p`.
-`type` is optional as long as `n` and `p` are specified.
+对于`binomial`类型，该函数将返回一个随机数，该随机数遵循概率为`p`的`n`次试验的二项式分布。
+只要指定了 `n` 和 `p`，`type` 是可选的。
 
 ```mcfunction
 # Binomial
@@ -103,7 +103,7 @@ data merge storage random:input {type: "binomial", n: 10, p: 0.166666667d}
 function random:number_provider
 ```
 
-For type `geometric`, the function will return a random number following a geometric distribution of parameter `p`.
+对于 `geometric` 类型，该函数将根据参数 `p` 的几何分布返回一个随机数。
 
 ```mcfunction
 # Geometric
@@ -111,7 +111,7 @@ data merge storage random:input {type: "geometric", p: 0.2d}
 function random:number_provider
 ```
 
-For type `poisson`, the function will return a Poisson variate of expected value `lambda`. Unlike `random:poisson`, no scale is expected for input.
+对于 `poisson` 类型，该函数将返回期望值 `lambda` 的泊松变量。 与 `random:poisson` 不同，输入不需要比例。
 
 ```mcfunction
 # Poisson
@@ -121,7 +121,7 @@ function random:number_provider
 
 ### `random:choose`
 
-Chooses a random tag from storage list `random:input List` and saves it to storage tag `random:output Tag`.
+从存储列表`random:input List`中选择一个随机标签并将其保存到存储标签`random:output Tag`中。
 
 ```mcfunction
 data modify storage random:input List set value ["green", "yellow", "orange", "pink"]
@@ -148,7 +148,7 @@ execute if score <player> <objective> matches 1 run say Tails
 
 ### `random:score_fraction`
 
-Succeeds with a probability of `$a`/`$b`.
+以`$a`/`$b`的概率成功。
 
 ```mcfunction
 scoreboard players set $a random 7
@@ -158,7 +158,7 @@ execute if predicate:score_fraction run say 7/12
 
 ### `random:score_invert`
 
-Succeeds with a probability of 1/`$chance`.
+以 1/`$chance` 的概率成功。
 
 ```mcfunction
 scoreboard players set $chance random 6
@@ -167,7 +167,7 @@ execute if predicate random:score_invert run say 1/6
 
 ### `random:score_percentage`
 
-Succeeds with probability `$chance` in percents. At 0, the predicate always fails; at 100, it always succeeds.
+以百分比的概率`$chance`成功。 在 0 时，谓词总是失败； 在 100 时，它总是成功。
 
 ```mcfunction
 scoreboard players set $chance random 5
@@ -176,7 +176,7 @@ execute if predicate random:score_percentage run say 5%
 
 ### `random:score_ppb`
 
-Succeeds with probability `$chance` in parts per billion. At 0, the predicate always fails; at 1,000,000,000, it always succeeds.
+以十亿分之几的概率 `$chance` 成功。 在 0 时，谓词总是失败； 在 1,000,000,000 时，它总是成功。
 
 ```mcfunction
 scoreboard players set $chance random 123456789
@@ -190,7 +190,7 @@ execute if predicate random:score_ppb run say 12.3456789%
 
 一些函数/谓词在 1.17 之前的版本中工作:
 
-| Function                 | Supported versions                                  |
+| 函数                 | 支持的版本                                |
 |--------------------------|-----------------------------------------------------|
 | `random:uniform`         | 1.13+                                               |
 | `random:binomial`        | 1.17+                                               |
@@ -198,7 +198,7 @@ execute if predicate random:score_ppb run say 12.3456789%
 | `random:poisson`         | 1.13+                                               |
 | `random:number_provider` | 1.15+, 1.17+ if `type` is `binomial` or `geometric` |
 
-| Predicate                 | Version |
+| 谓词                 | 支持的版本 |
 |---------------------------|---------|
 | `random:coin_toss`        | 1.15+   |
 | `random:score_inverse`    | 1.17+   |
