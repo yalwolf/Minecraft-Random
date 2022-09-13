@@ -1,6 +1,6 @@
 #> random:geometric
 #
-# Generates a random number following a geometric distribution of probability p, supported on {1, 2, 3, ...}
+# 根据概率 p 的几何分布生成随机数，支持 {1, 2, 3, ...}
 # Caps at 1000
 #
 # @public
