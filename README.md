@@ -206,4 +206,5 @@ execute if predicate random:score_ppb run say 12.3456789%
 | `random:score_ppb`        | 1.17+   |
 
 Minecraft Random 不适用于 Minecraft：基岩版。
+
 由`Google翻译`提供翻译
