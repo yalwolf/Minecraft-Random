@@ -48,8 +48,8 @@ function random:geometric
 
 ### `random:poisson`
 
-Generates a random number using a Poisson distribution given the expected value `lambda` with a scale of 10.
-The generated value is saved to score `$out random`.
+使用 Poisson 分布生成一个随机数，给定期望值 `lambda`，比例为 10。
+生成的值被保存到分数`$out random`中。
 
 ```mcfunction
 scoreboard players set $lambda random 20
